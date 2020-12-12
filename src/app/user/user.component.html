@@ -1,0 +1,9 @@
+<p>Hello user works!</p>
+<li *ngFor="let user of users">
+    <a [routerLink]="user.id" routerLinkActive="active">{{user.id}} - {{user.name}}</a> 
+</li>
+<router-outlet></router-outlet>
+
+
+
+

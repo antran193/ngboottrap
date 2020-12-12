@@ -1,0 +1,9 @@
+<h1>List of programming languages:</h1>
+<ul *ngFor="let lang of languages" class="list-group"> 
+    <li class="list-group-item">
+        <a (click)="showInfo(lang)">
+            {{lang.id}} - {{lang.name}}
+        </a>
+    </li>
+</ul>
+<!-- <router-outlet></router-outlet> -->

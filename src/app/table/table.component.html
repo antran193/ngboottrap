@@ -1,0 +1,14 @@
+<p>table works!</p>
+<tr>
+    <th *ngFor="let keydata of header">{{keydata}}
+        <br>
+        <button (click)="hiden()">Hiden</button>
+    </th>
+</tr>
+<tr *ngFor="let row of table">
+    <td *ngFor="let col of header">{{row[col]}}</td>
+</tr>
+<form *ngFor="let keydata of keyrow;let i = index">
+    <input type="checkbox" checked (change)="togglehidecol(keydata,$event,i)">
+    <label>{{keydata}}</label><br>
+</form>
