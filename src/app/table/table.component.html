@@ -1,14 +1,50 @@
 <p>table works!</p>
-<tr>
-    <th *ngFor="let keydata of header">{{keydata}}
-        <br>
-        <button (click)="hiden()">Hiden</button>
-    </th>
-</tr>
-<tr *ngFor="let row of table">
-    <td *ngFor="let col of header">{{row[col]}}</td>
-</tr>
-<form *ngFor="let keydata of keyrow;let i = index">
+<table>
+    <tr>
+        <th *ngFor="let keydata of keydataj">{{keydata}}
+        </th>
+    </tr>
+    <tr *ngFor="let row of datahttp">
+        <td *ngFor="let col of keydataj">{{row[col]}}</td>
+    </tr>
+</table>
+
+<form *ngFor="let keydata of keydataj;let i = index">
     <input type="checkbox" checked (change)="togglehidecol(keydata,$event,i)">
     <label>{{keydata}}</label><br>
 </form>
+<button (click)="adddata()">Them Tai Khoan</button>
+<div class="tabadddata">
+    User : <input [(ngModel)]="datachange.username" type="text">
+    Password : <input [(ngModel)]="datachange.password" type="text">
+</div>
+<br>
+<!-- <p>You can bind our <code>NgbPagination</code> component with slicing the data list</p> -->
+<div id="divtable">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th *ngFor="let keydata of keydataj" scope="col">{{keydata}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of datahttp">
+                <td *ngFor="let col of keydataj">{{row[col]}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="d-flex justify-content-between p-2">
+    <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"
+        (pageChange)="refreshtable()">
+    </ngb-pagination>
+
+    <select class="custom-select" style="width: auto" [(ngModel)]="pageSize" (ngModelChange)="refreshtable()">
+        <option [ngValue]="2">2 items per page</option>
+        <option [ngValue]="4">4 items per page</option>
+        <option [ngValue]="6">6 items per page</option>
+    </select>
+</div>

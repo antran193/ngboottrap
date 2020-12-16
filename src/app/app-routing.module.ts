@@ -35,10 +35,7 @@ const routes: Routes = [
       {path : 'aboutdetail',
       component : AboutDetailComponent},
       {path : 'child-a' , component: ChildAComponent},
-      {path : 'child-b' , component: ChildBComponent},
-      {
-        path : '', redirectTo: 'aboutdetail', pathMatch: 'full'
-      }
+      {path : 'child-b' , component: ChildBComponent}
     ]
   },
   {
@@ -46,9 +43,6 @@ const routes: Routes = [
     component: UserComponent,children:[
      {path: '',
      loadChildren: () => import('./user/user.moduel').then(m => m.UserModule)}]
-  },
-  {
-    path : '', redirectTo: 'about', pathMatch: 'full'
   },
   {
     path : 'table', component: TableComponent

@@ -14,6 +14,17 @@ import { ChildBComponent } from './about/child-b/child-b.component';
 import { UserComponent } from './user/user.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { TableComponent } from './table/table.component';
+import {HttpClientModule} from '@angular/common/http';
+import { TablechildComponent } from './table/tablechild/tablechild.component';
+import { FormsModule } from '@angular/forms';
+import { NgbAlertModule, NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { AccordionComponent } from './accordion/accordion.component';
+import { AlertComponent } from './alert/alert.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { CollapseComponent } from './collapse/collapse.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
+
+
 
 @NgModule({
   declarations: [
@@ -27,12 +38,24 @@ import { TableComponent } from './table/table.component';
     ChildAComponent,
     ChildBComponent,
     TableComponent,
+    TablechildComponent,
+    AccordionComponent,
+    AlertComponent,
+    CarouselComponent,
+    CollapseComponent,
+    DropdownComponent,
+
 
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    NgbModule,
+    NgbPaginationModule,
+    NgbAlertModule
   ],
   providers: [],
   bootstrap: [AppComponent]

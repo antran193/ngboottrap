@@ -2,3 +2,10 @@ td,th{
     width: 30%;
     text-align: center;
 }
+.tabadddata{
+    position:absolute;
+    z-index: 2;
+}
+#divtable{
+    margin-top: 50px;
+}

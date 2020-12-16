@@ -1,6 +1,10 @@
-<p>about works!</p>
-<a routerLink='/about/aboutdetail'>AboutDetail</a> | 
-<a routerLink='/about/child-a'>Child A</a> | 
-<a routerLink='/about/child-b'>Child B</a>
+
+
 <router-outlet></router-outlet>
+<br>
+Message from child : {{mess}}
+<br>
+<!-- <app-child-a ></app-child-a><br> -->
+<app-child-a (messageEvent)="receiveMessage($event)" [childMessage]="parentMessage"></app-child-a><br>
+<button (click)="changechilda()">Change Text Child-a</button>
 
