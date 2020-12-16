@@ -23,6 +23,11 @@ import { AlertComponent } from './alert/alert.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CollapseComponent } from './collapse/collapse.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { ModalComponent } from './modal/modal.component';
+import { ModalconfirmComponent } from './modal/modalconfirm/modalconfirm.component';
+import { ModalfocusComponent } from './modal/modalfocus/modalfocus.component';
+import { NavComponent } from './nav/nav.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 
 
@@ -44,6 +49,11 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     CarouselComponent,
     CollapseComponent,
     DropdownComponent,
+    ModalComponent,
+    ModalconfirmComponent,
+    ModalfocusComponent,
+    NavComponent,
+    PaginationComponent,
 
 
 

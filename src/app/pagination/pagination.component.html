@@ -1,0 +1,20 @@
+
+<tbody>
+    <tr *ngFor="let hero of heros">
+        <td><a [routerLink]="['/heros/detail', hero.id]">
+            {{hero.id}} - {{hero.name}}
+        </a></td>
+    </tr>
+</tbody>
+<!-- <h1>List of heros:</h1>
+<ul *ngFor="let hero of heros" class="list-group"> 
+    <li class="list-group-item">
+        <a [routerLink]="['/heros/detail', hero.id]">
+            {{hero.id}} - {{hero.name}}
+        </a>
+    </li>
+</ul> -->
+<ngb-pagination [collectionSize]="colect" [(page)]="page" [pageSize]="pageSize" (pageChange)="refreshHeros()">
+
+</ngb-pagination>
+<router-outlet></router-outlet>
